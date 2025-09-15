@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Caderno de Negócios</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+    <header>
+      <h1>Caderno de Negócios</h1>
+    </header>
+    <nav>
+      <button class="tab-btn active" data-tab="home">Home</button>
+      <button class="tab-btn" data-tab="search">Busca</button>
+      <button class="tab-btn" data-tab="news">Notícias</button>
+      <button class="tab-btn" data-tab="events">Eventos</button>
+      <button class="tab-btn" data-tab="courses">Cursos</button> <!-- Nova aba -->
+      <button class="tab-btn" data-tab="fairs">Feiras</button>   <!-- Nova aba -->
+      <button class="tab-btn" data-tab="profile">Perfil</button>
+      <button class="tab-btn" data-tab="contact">Contato</button>
+    </nav>
+    <main>
+      <!-- Home -->
+      <section class="tab-content active" id="home">
+        <div class="card">
+          <h2>Destaques do dia</h2>
+          <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=400&q=80" alt="Empresa destaque" class="card-img">
+          <p>Empresa X expandindo operações em Guarulhos.</p>
+        </div>
+        <div class="card">
+          <h2>Próximos eventos</h2>
+          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Evento" class="card-img">
+          <p>Feira de Negócios - 20/09</p>
+        </div>
+        <div class="grid-buttons">
+          <button>Perfil Empresa</button>
+          <button>Anuncie Aqui</button>
+        </div>
+      </section>
+
+      <!-- Busca (empresas) -->
+      <section class="tab-content" id="search">
+        <input type="text" id="searchInput" placeholder="Buscar empresas...">
+        <div id="empresasList"></div>
+      </section>
+
+      <!-- Notícias -->
+      <section class="tab-content" id="news"></section>
+
+      <!-- Eventos -->
+      <section class="tab-content" id="events"></section>
+
+      <!-- Cursos -->
+      <section class="tab-content" id="courses">
+        <div class="card">
+          <h2>Curso de Marketing Digital</h2>
+          <img src="https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=400&q=80" alt="Curso Marketing" class="card-img">
+          <p>Aprenda estratégias de marketing digital para negócios locais.</p>
+          <p>Data: 05/10/2025</p>
+          <p>Local: Centro de Treinamento Guarulhos</p>
+        </div>
+        <div class="card">
+          <h2>Curso de Gestão Financeira</h2>
+          <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Curso Finanças" class="card-img">
+          <p>Controle e planejamento financeiro para pequenas empresas.</p>
+          <p>Data: 12/10/2025</p>
+          <p>Local: Sebrae Guarulhos</p>
+        </div>
+      </section>
+
+      <!-- Feiras -->
+      <section class="tab-content" id="fairs">
+        <div class="card">
+          <h2>Feira do Empreendedor</h2>
+          <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80" alt="Feira Empreendedor" class="card-img">
+          <p>Oportunidade para networking e exposição de produtos.</p>
+          <p>Data: 20/10/2025</p>
+          <p>Local: Expo Center Norte</p>
+        </div>
+        <div class="card">
+          <h2>Feira de Tecnologia</h2>
+          <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="Feira Tecnologia" class="card-img">
+          <p>Novidades e tendências do setor tecnológico.</p>
+          <p>Data: 28/10/2025</p>
+          <p>Local: Parque Tecnológico Guarulhos</p>
+        </div>
+      </section>
+
+      <!-- Perfil -->
+      <section class="tab-content" id="profile">
+        <div class="card">
+          <h2>Empresa Y</h2>
+          <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=400&q=80" alt="Empresa Y" class="card-img">
+          <p>Descrição breve da empresa do setor de tecnologia.</p>
+          <p>Endereço: Av. Paulista, 1000 - Guarulhos</p>
+          <p>Telefone: (11) 99999-9999</p>
+          <p>Email: contato@empresay.com</p>
+          <iframe
+            title="mapa"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.5105!2d-46.6333!3d-23.5505"
+            allowfullscreen
+            loading="lazy"
+          ></iframe>
+          <button>Compartilhar</button>
+        </div>
+      </section>
+
+      <!-- Contato -->
+      <section class="tab-content" id="contact">
+        <form id="contactForm">
+          <input type="text" name="nome" placeholder="Nome" required>
+          <input type="email" name="email" placeholder="E-mail" required>
+          <textarea name="mensagem" placeholder="Mensagem" rows="4" required></textarea>
+          <button type="submit">Enviar</button>
+        </form>
+        <p id="successMsg" class="success-msg" style="display:none;"></p>
+      </section>
+    </main>
+    <footer>
+      <p>© 2025 Caderno de Negócios de Guarulhos</p>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
