@@ -100,13 +100,12 @@ menuBtn.addEventListener('click', () => {
   sideMenu.classList.toggle('open');
 });
 
-// Troca de abas ao clicar nos itens do menu
 document.querySelectorAll('.menu-item').forEach(btn => {
   btn.addEventListener('click', () => {
     document.querySelectorAll('.menu-item').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
     document.querySelectorAll('.tab-content').forEach(sec => sec.classList.remove('active'));
     document.getElementById(btn.dataset.tab).classList.add('active');
-    sideMenu.classList.remove('open'); // fecha o menu ao clicar
+    sideMenu.classList.remove('open');
   });
 });
