@@ -82,37 +82,11 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
 // Inicialização
 renderEmpresas();
 
-// Capa de entrada com arrasto
+// Capa de entrada com clique
 const cover = document.getElementById('site-cover');
 const arrow = document.getElementById('drag-arrow');
-let isDragging = false;
-let startX = 0;
 
-arrow.addEventListener('mousedown', function(e) {
-  isDragging = true;
-  startX = e.clientX;
-  arrow.style.transition = 'none';
-});
-
-document.addEventListener('mousemove', function(e) {
-  if (isDragging) {
-    let dx = e.clientX - startX;
-    if (dx > 0) {
-      arrow.style.transform = `translateX(${dx}px)`;
-    }
-    if (dx > 120) { // distância para "entrar"
-      cover.style.opacity = '0';
-      setTimeout(() => cover.style.display = 'none', 500);
-      isDragging = false;
-      arrow.style.transform = '';
-    }
-  }
-});
-
-document.addEventListener('mouseup', function() {
-  if (isDragging) {
-    arrow.style.transition = '';
-    arrow.style.transform = '';
-    isDragging = false;
-  }
+arrow.addEventListener('click', function() {
+  cover.style.opacity = '0';
+  setTimeout(() => cover.style.display = 'none', 500);
 });
