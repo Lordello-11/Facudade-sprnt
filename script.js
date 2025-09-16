@@ -22,9 +22,6 @@ document.querySelectorAll('.tab-btn').forEach(btn => {
     btn.classList.add('active');
     document.querySelectorAll('.tab-content').forEach(sec => sec.classList.remove('active'));
     document.getElementById(btn.dataset.tab).classList.add('active');
-    if (btn.dataset.tab === "search") renderEmpresas();
-    if (btn.dataset.tab === "news") renderNoticias();
-    if (btn.dataset.tab === "events") renderEventos();
   });
 });
 
