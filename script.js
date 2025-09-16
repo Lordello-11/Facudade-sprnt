@@ -132,3 +132,6 @@ document.querySelectorAll('.top-nav .tab-btn').forEach(btn => {
     document.getElementById(btn.dataset.tab).classList.add('active');
   });
 });
+
+sideMenu.classList.remove('open');
+sideMenu.style.display = "flex";

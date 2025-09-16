@@ -302,11 +302,32 @@ iframe {
   width: 320px;
   max-width: 90vw;
   padding: 2rem 1rem;
+  right: -320px; /* menu fora da tela */
+  display: flex;
 }
 
 .menu-item {
   font-size: 1.1rem;
   padding: 0.7rem 1rem;
+  opacity: 0;
+  transform: translateX(40px);
+  transition: 
+    background 0.2s, 
+    color 0.2s, 
+    opacity 0.4s cubic-bezier(.4,0,.2,1), 
+    transform 0.4s cubic-bezier(.4,0,.2,1);
+}
+
+.side-menu.open .menu-item {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.menu-item:hover,
+.menu-item.active {
+  background: #2563eb;
+  color: #fff;
+  box-shadow: 0 2px 12px rgba(37,99,235,0.12);
 }
 
 /* Responsividade geral */
@@ -349,11 +370,20 @@ body, html {
   width: 320px;
   max-width: 90vw;
   padding: 2rem 1rem;
+  right: -320px; /* menu fora da tela */
+  display: flex;
 }
 
 .menu-item {
   font-size: 1.1rem;
   padding: 0.7rem 1rem;
+  opacity: 0;
+  transform: translateX(40px);
+  transition: 
+    background 0.2s, 
+    color 0.2s, 
+    opacity 0.4s cubic-bezier(.4,0,.2,1), 
+    transform 0.4s cubic-bezier(.4,0,.2,1);
 }
 
 /* Cards responsivos */
