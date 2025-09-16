@@ -48,46 +48,45 @@ header::before {
 /* Navegação */
 nav {
   display: flex;
-  flex-direction: column;
-  gap: 4px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
   background: #f3f4f6;
   border-bottom: 2px solid #e0e7ff;
-  padding: 0.5rem 0.5rem 0 0.5rem;
+  padding: 0.5rem 0;
 }
 
 .nav-row {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
   gap: 8px;
-  margin-bottom: 2px;
+  margin-bottom: 0;
 }
 
 nav button {
-  padding: 0.9rem 0.2rem;
+  width: 44px;
+  height: 44px;
+  padding: 0;
   border: none;
   background: none;
   cursor: pointer;
-  font-weight: 500;
-  font-size: 1rem;
-  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
-  border-radius: 32px;
-  margin: 2px 0;
+  font-size: 1.3rem;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
   box-shadow: 0 1px 4px rgba(37,99,235,0.04);
 }
 
 nav button span {
-  font-size: 1.2em;
+  font-size: 1.3em;
 }
 
 nav button.active,
 nav button:hover {
   background: linear-gradient(90deg, #2563eb 60%, #60a5fa 100%);
   color: #fff;
-  border-radius: 32px;
   box-shadow: 0 2px 8px rgba(37,99,235,0.12);
 }
 
