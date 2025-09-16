@@ -87,10 +87,10 @@ const cover = document.getElementById('site-cover');
 const arrow = document.getElementById('drag-arrow');
 
 arrow.addEventListener('click', function() {
-  arrow.classList.add('clicked'); // animação de cor e puxar
+  arrow.classList.add('clicked', 'slide');
   cover.style.opacity = '0';
   setTimeout(() => {
     cover.style.display = 'none';
-    arrow.classList.remove('clicked');
+    arrow.classList.remove('clicked', 'slide');
   }, 500);
 });
