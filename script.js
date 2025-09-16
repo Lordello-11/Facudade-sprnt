@@ -112,7 +112,6 @@ document.querySelectorAll('.menu-item').forEach(btn => {
 
 const layoutBtn = document.getElementById('layout-btn');
 const topNav = document.getElementById('top-nav');
-const sideMenu = document.getElementById('side-menu');
 
 layoutBtn.addEventListener('click', () => {
   if (topNav.style.display === "none") {
