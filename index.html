@@ -17,24 +17,25 @@
     </div>
   </div>
   <div class="app-container">
-    <header>
-      <h1>Caderno de Negócios</h1>
+    <header class="topbar">
+      <div class="logo">Caderno de Negócios</div>
+      <nav class="main-nav">
+        <button class="tab-btn active" data-tab="home"><span>🏠</span> Home</button>
+        <button class="tab-btn" data-tab="news"><span>📰</span> Notícias</button>
+        <button class="tab-btn" data-tab="events"><span>📅</span> Eventos</button>
+        <button class="tab-btn" data-tab="courses"><span>🎓</span> Cursos</button>
+        <button class="tab-btn" data-tab="menu"><span style="font-size:1.5em;">☰</span> Menu</button>
+      </nav>
     </header>
-    <nav>
-      <div class="nav-row">
-        <button class="tab-btn active" data-tab="home"><span>🏠</span></button>
-        <button class="tab-btn" data-tab="search"><span>🔍</span></button>
-        <button class="tab-btn" data-tab="news"><span>📰</span></button>
-        <button class="tab-btn" data-tab="menu"><span style="font-size:1.5em;">☰</span></button>
-      </div>
-    </nav>
     <main>
       <!-- Home -->
       <section class="tab-content active" id="home">
-        <div class="card">
-          <h2>Destaques do dia</h2>
-          <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=400&q=80" alt="Empresa destaque" class="card-img">
-          <p>Empresa X expandindo operações em Guarulhos.</p>
+        <div class="main-card">
+          <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80" alt="Empresas e negócios">
+          <div class="main-card-content">
+            <h2>Destaque do Dia</h2>
+            <p>Empresa X expandindo operações em Guarulhos.</p>
+          </div>
         </div>
         <div class="card">
           <h2>Próximos eventos</h2>
