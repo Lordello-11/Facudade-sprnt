@@ -98,7 +98,14 @@ const sideMenu = document.getElementById('side-menu');
 
 menuBtn.addEventListener('click', () => {
   sideMenu.classList.toggle('open');
+  if (sideMenu.classList.contains('open')) {
+    sideMenu.style.display = "flex";
+  } else {
+    sideMenu.style.display = "none";
+  }
 });
+sideMenu.classList.remove('open');
+sideMenu.style.display = "none";
 
 document.querySelectorAll('.menu-item').forEach(btn => {
   btn.addEventListener('click', () => {
