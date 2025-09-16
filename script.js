@@ -87,6 +87,10 @@ const cover = document.getElementById('site-cover');
 const arrow = document.getElementById('drag-arrow');
 
 arrow.addEventListener('click', function() {
+  arrow.classList.add('clicked'); // animação de cor e puxar
   cover.style.opacity = '0';
-  setTimeout(() => cover.style.display = 'none', 500);
+  setTimeout(() => {
+    cover.style.display = 'none';
+    arrow.classList.remove('clicked');
+  }, 500);
 });
