@@ -109,3 +109,27 @@ document.querySelectorAll('.menu-item').forEach(btn => {
     sideMenu.classList.remove('open');
   });
 });
+
+const layoutBtn = document.getElementById('layout-btn');
+const topNav = document.getElementById('top-nav');
+const sideMenu = document.getElementById('side-menu');
+
+layoutBtn.addEventListener('click', () => {
+  if (topNav.style.display === "none") {
+    topNav.style.display = "flex";
+    sideMenu.style.display = "none";
+  } else {
+    topNav.style.display = "none";
+    sideMenu.style.display = "flex";
+  }
+});
+
+// Troca de abas para o menu do topo também
+document.querySelectorAll('.top-nav .tab-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('.tab-content').forEach(sec => sec.classList.remove('active'));
+    document.getElementById(btn.dataset.tab).classList.add('active');
+  });
+});
