@@ -240,23 +240,32 @@ iframe {
 }
 
 .drag-arrow {
-  width: 80px;
-  height: 80px;
-  background: #2563eb;
-  border-radius: 50%;
+  width: 120px;           /* aumenta a largura */
+  height: 56px;           /* altura menor para formato "pílula" */
+  background: linear-gradient(90deg, #2563eb 60%, #60a5fa 100%);
+  border-radius: 32px;    /* formato pílula */
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto;
-  cursor: grab;
+  cursor: pointer;
   font-size: 2.5rem;
   color: #fff;
   box-shadow: 0 2px 12px rgba(37,99,235,0.18);
-  transition: background 0.2s, transform 0.2s;
+  transition: background 0.3s, transform 0.2s;
   user-select: none;
+  position: relative;
+  overflow: hidden;
 }
 
-.drag-arrow:active {
-  background: #60a5fa;
-  transform: scale(1.1);
+.drag-arrow.clicked {
+  background: linear-gradient(90deg, #60a5fa 60%, #2563eb 100%);
+  animation: arrow-pull 0.5s;
+  transform: scaleX(1.15);
+}
+
+@keyframes arrow-pull {
+  0%   { background: linear-gradient(90deg, #2563eb 60%, #60a5fa 100%); }
+  50%  { background: linear-gradient(90deg, #60a5fa 60%, #2563eb 100%); }
+  100% { background: linear-gradient(90deg, #2563eb 60%, #60a5fa 100%); }
 }
