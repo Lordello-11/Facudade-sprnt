@@ -49,33 +49,46 @@ header::before {
 nav {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 4px;
   background: #f3f4f6;
   border-bottom: 2px solid #e0e7ff;
+  padding: 0.5rem 0.5rem 0 0.5rem;
 }
 
 .nav-row {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 2px;
+  gap: 8px;
+  margin-bottom: 2px;
 }
 
 nav button {
-  padding: 0.9rem 0;
+  padding: 0.9rem 0.2rem;
   border: none;
   background: none;
   cursor: pointer;
   font-weight: 500;
-  transition: background 0.2s, color 0.2s;
-  border-radius: 16px 16px 0 0; /* Mais arredondado */
-  margin: 2px 4px 0 4px;
+  font-size: 1rem;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  border-radius: 32px;
+  margin: 2px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  box-shadow: 0 1px 4px rgba(37,99,235,0.04);
+}
+
+nav button span {
+  font-size: 1.2em;
 }
 
 nav button.active,
 nav button:hover {
-  background: #2563eb;
+  background: linear-gradient(90deg, #2563eb 60%, #60a5fa 100%);
   color: #fff;
-  border-radius: 16px 16px 0 0;
+  border-radius: 32px;
+  box-shadow: 0 2px 8px rgba(37,99,235,0.12);
 }
 
 .card {
@@ -193,4 +206,59 @@ iframe {
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px);}
   to { opacity: 1; transform: translateY(0);}
+}
+
+/* Capa de entrada do site */
+.site-cover {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(120deg, #2563eb 60%, #60a5fa 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  transition: opacity 0.5s;
+}
+
+.cover-content {
+  background: rgba(255,255,255,0.95);
+  border-radius: 32px;
+  box-shadow: 0 8px 32px rgba(37,99,235,0.18);
+  padding: 3rem 2rem;
+  text-align: center;
+  min-width: 320px;
+}
+
+.cover-content h2 {
+  font-size: 2rem;
+  color: #2563eb;
+  margin-bottom: 1rem;
+}
+
+.cover-content p {
+  font-size: 1.1rem;
+  color: #1e293b;
+  margin-bottom: 2rem;
+}
+
+.drag-arrow {
+  width: 80px;
+  height: 80px;
+  background: #2563eb;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  cursor: grab;
+  font-size: 2.5rem;
+  color: #fff;
+  box-shadow: 0 2px 12px rgba(37,99,235,0.18);
+  transition: background 0.2s, transform 0.2s;
+  user-select: none;
+}
+
+.drag-arrow:active {
+  background: #60a5fa;
+  transform: scale(1.1);
 }
