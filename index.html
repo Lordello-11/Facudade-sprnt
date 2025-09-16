@@ -19,14 +19,26 @@
   <div class="app-container">
     <header class="topbar">
       <div class="logo">Caderno de Negócios</div>
-      <nav class="main-nav">
-        <button class="tab-btn active" data-tab="home"><span>🏠</span> Home</button>
-        <button class="tab-btn" data-tab="news"><span>📰</span> Notícias</button>
-        <button class="tab-btn" data-tab="events"><span>📅</span> Eventos</button>
-        <button class="tab-btn" data-tab="courses"><span>🎓</span> Cursos</button>
-        <button class="tab-btn" data-tab="menu"><span style="font-size:1.5em;">☰</span> Menu</button>
-      </nav>
+      <button id="menu-btn" class="menu-btn"><span style="font-size:1.7em;">☰</span></button>
     </header>
+
+    <!-- Menu lateral/modal -->
+    <div id="side-menu" class="side-menu">
+      <nav>
+        <button class="menu-item" data-tab="home"><span>🏠</span> Home</button>
+        <button class="menu-item" data-tab="news"><span>📰</span> Notícias</button>
+        <button class="menu-item" data-tab="events"><span>📅</span> Eventos</button>
+        <button class="menu-item" data-tab="courses"><span>🎓</span> Cursos</button>
+        <button class="menu-item" data-tab="fairs"><span>🏢</span> Feiras</button>
+        <button class="menu-item" data-tab="profile"><span>👤</span> Perfil</button>
+        <button class="menu-item" data-tab="contact"><span>✉️</span> Contato</button>
+        <button class="menu-item" data-tab="partners"><span>🤝</span> Parceiros</button>
+        <button class="menu-item" data-tab="support"><span>💬</span> Suporte</button>
+        <button class="menu-item" data-tab="about"><span>ℹ️</span> Sobre</button>
+        <button class="menu-item" data-tab="settings"><span>⚙️</span> Configurações</button>
+      </nav>
+    </div>
+
     <main>
       <!-- Home -->
       <section class="tab-content active" id="home">
